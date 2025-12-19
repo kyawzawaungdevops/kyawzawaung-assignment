@@ -14,6 +14,7 @@ persistence:
   enabled: true
   accessMode: ReadWriteOnce
   size: 1Gi
+  storageClass: "local-path"
 
 service:
   port: 3306
