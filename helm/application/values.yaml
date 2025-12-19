@@ -4,8 +4,8 @@ namespaces:
 replicaCount: 2
 
 image:
-  repository: testingkyaw/springbootapp
-  tag: latest
+  repository: kyawzawaung1148/springboot-app
+  tag: v1
   pullPolicy: Always
 
 resources:
