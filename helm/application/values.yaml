@@ -15,7 +15,7 @@ resources:
     cpu: "250m"
 
 service:
-  type: LoadBalancer
+  type: NodePort
   port: 80
   targetPort: 8080
   nodePort: 32145
