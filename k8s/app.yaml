@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: petclinic-app
+  namespace: argocd
+spec:
+  project: petclinic
+
+  source:
+    repoURL: https://github.com/kyawzawaungdevops/kyawzawaung-assignment
+    targetRevision: main
+    path: helm/spring-petclinic
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

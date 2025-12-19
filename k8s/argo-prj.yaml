@@ -1,0 +1,34 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: petclinic
+  namespace: argocd
+spec:
+  description: Petclinic Helm deployments
+
+  sourceRepos:
+    - https://github.com/kyawzawaungdevops/kyawzawaung-assignment
+
+  destinations:
+    - namespace: app
+      server: https://kubernetes.default.svc
+    - namespace: database
+      server: https://kubernetes.default.svc
+
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+    - group: ""
+      kind: PersistentVolumeClaim
+
+  namespaceResourceWhitelist:
+    - group: ""
+      kind: Service
+    - group: ""
+      kind: ConfigMap
+    - group: ""
+      kind: Secret
+    - group: apps
+      kind: Deployment
+    - group: apps
+      kind: StatefulSet
