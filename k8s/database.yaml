@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/kyawzawaungdevops/kyawzawaung-assignment
     targetRevision: main
-    path: helm/petclinic-mysql
+    path: helm/database
 
   destination:
     server: https://kubernetes.default.svc

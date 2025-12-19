@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/kyawzawaungdevops/kyawzawaung-assignment
     targetRevision: main
-    path: helm/spring-petclinic
+    path: helm/application
 
   destination:
     server: https://kubernetes.default.svc
