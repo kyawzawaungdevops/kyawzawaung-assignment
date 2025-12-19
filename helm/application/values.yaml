@@ -1,6 +1,5 @@
 namespaces:
   app: app
-  database: database
 
 replicaCount: 2
 
@@ -15,10 +14,9 @@ resources:
     cpu: "250m"
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 80
   targetPort: 8080
-  nodePort: 32145
 
 database:
   user: petclinic-user
