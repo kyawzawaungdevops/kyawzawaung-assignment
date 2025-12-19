@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-mysql-service
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: petclinic
+spec:
+  clusterIP: None
+  selector:
+    tier: mysql
+  ports:
+    - port: {{ .Values.service.port }}

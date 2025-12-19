@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-deployment-service
+  namespace: {{ .Values.namespaces.app }}
+  labels:
+    app: webapp-deployment
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: webapp-deployment
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      nodePort: {{ .Values.service.nodePort }}

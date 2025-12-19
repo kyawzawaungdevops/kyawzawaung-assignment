@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-data
+  namespace: {{ .Values.namespaces.app }}
+data:
+  user: "{{ .Values.database.user }}"
+  databaseurl: "{{ .Values.database.url }}"

@@ -1,0 +1,29 @@
+namespaces:
+  app: app
+  database: database
+
+replicaCount: 2
+
+image:
+  repository: testingkyaw/springbootapp
+  tag: latest
+  pullPolicy: Always
+
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: "250m"
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+  nodePort: 32145
+
+database:
+  user: petclinic-user
+  url: jdbc:mysql://petclinic-mysql-service.database.svc.cluster.local:3306/petclinic-database
+
+secrets:
+  mysqlSecretName: mysql-pass
+  mysqlPasswordKey: password
