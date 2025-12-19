@@ -15,20 +15,4 @@ spec:
     - namespace: database
       server: https://kubernetes.default.svc
 
-  clusterResourceWhitelist:
-    - group: ""
-      kind: Namespace
-    - group: ""
-      kind: PersistentVolumeClaim
-
-  namespaceResourceWhitelist:
-    - group: ""
-      kind: Service
-    - group: ""
-      kind: ConfigMap
-    - group: ""
-      kind: Secret
-    - group: apps
-      kind: Deployment
-    - group: apps
-      kind: StatefulSet
+ 
