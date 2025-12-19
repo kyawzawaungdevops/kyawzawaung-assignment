@@ -1,5 +1,6 @@
-namespaces:
-  app: app
+namespace:
+  create: true
+  name: "app"
 
 replicaCount: 2
 

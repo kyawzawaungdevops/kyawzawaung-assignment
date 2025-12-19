@@ -1,5 +1,7 @@
-namespace: database
-
+namespace:
+  create: true
+  name: "database"
+  
 mysql:
   image: mysql
   tag: "8.0"
