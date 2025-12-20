@@ -1,4 +1,4 @@
-namespace:
+namespaces:
   create: true
   name: "app"
 
