@@ -4,7 +4,7 @@ metadata:
   name: petclinic-mysql
   namespace: argocd
 spec:
-  project: petclinic
+  project: default
 
   source:
     repoURL: https://github.com/kyawzawaungdevops/kyawzawaung-assignment
