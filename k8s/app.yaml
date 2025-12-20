@@ -4,7 +4,7 @@ metadata:
   name: petclinic-app
   namespace: argocd
 spec:
-  project: default
+  project: petclinic
 
   source:
     repoURL: https://github.com/kyawzawaungdevops/kyawzawaung-assignment
