@@ -10,9 +10,21 @@ spec:
     - https://github.com/kyawzawaungdevops/kyawzawaung-assignment
 
   destinations:
-    - namespace: app
-      server: https://kubernetes.default.svc
-    - namespace: database
+    # Changed to wildcard so the project can deploy to 'app', 'database', 
+    # and any other namespace your charts might create.
+    - namespace: '*'
       server: https://kubernetes.default.svc
 
- 
+  # 1. Allows cluster-level resources like the 'Namespace' object itself
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  # 2. Allows all standard resources (Deployments, Services, PVCs, etc.)
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+
+  # 3. Optional: Allow all sync orphans to be pruned if you delete them from Git
+  orphanedResources:
+    warn: false
