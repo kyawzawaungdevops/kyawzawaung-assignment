@@ -6,7 +6,7 @@ replicaCount: 2
 
 image:
   repository: kyawzawaung1148/springboot-app
-  tag: v1
+  tag: v5
   pullPolicy: Always
 
 resources:
