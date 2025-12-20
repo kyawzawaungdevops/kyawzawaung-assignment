@@ -1,4 +1,4 @@
-namespace: "databasae"
+namespace: "database"
   
 mysql:
   image: mysql
