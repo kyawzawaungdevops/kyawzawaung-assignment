@@ -1,11 +1,9 @@
 # helm/application/templates/namespace.yaml
-
-{{- if .Values.namespace.create -}}
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ .Values.namespace.name }}
+  name: {{ .Values.namespaces.name }}
   labels:
-    name: {{ .Values.namespace.name }}
+    name: {{ .Values.namespaces.name }}
     managed-by: "argocd"
-{{- end -}}
+

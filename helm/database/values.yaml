@@ -1,6 +1,4 @@
-namespace:
-  create: true
-  name: "database"
+namespace: "databasae"
   
 mysql:
   image: mysql
@@ -20,3 +18,5 @@ persistence:
 
 service:
   port: 3306
+
+
