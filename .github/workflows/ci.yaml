@@ -6,14 +6,14 @@ on:
     paths-ignore:
       - "helm/**"
       - "k8s/**"
-      - "README.md"
+      - "**/README.md"
 
   pull_request:
     branches: [ "main" ]
     paths-ignore:
       - "helm/**"
       - "k8s/**"
-      - "README.md"
+      - "**/README.md"
 
 env:
   REGISTRY: docker.io
@@ -42,7 +42,6 @@ jobs:
       - name: Run unit tests
         run: mvn test
 
-
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -60,7 +59,6 @@ jobs:
         with:
           name: app-jar
           path: target/*.jar
-
 
   docker:
     name: Build & Push Docker Image
