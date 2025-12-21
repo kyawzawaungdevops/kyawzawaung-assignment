@@ -1,5 +1,5 @@
 # SpringBoot CI/CD GitOps Assignment
-![Architecture Diagram](https://kyawzawaung2284.atlassian.net/5bdab0d5-f33b-476a-b186-f7976e968e23)
+![Architecture Diagram](architecture.png)
 
 This assignment involves building an open-source **Java SpringBoot** application locally, running its **CI pipeline**, deploying it on a **K3d Kubernetes cluster** using **GitOps with ArgoCD**, and monitoring it with **Prometheus and Grafana**, exposed publicly through a **Cloudflare Tunnel**.
 
