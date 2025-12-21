@@ -39,7 +39,7 @@ jobs:
       - name: Compile
         run: mvn clean compile
 
-      - name: Run unit tests
+      - name: Run unit test
         run: mvn test
 
   build:
