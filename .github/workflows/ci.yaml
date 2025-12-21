@@ -6,14 +6,14 @@ on:
     paths-ignore:
       - "helm/**"
       - "k8s/**"
-      - "**.md"
+      - "README.md"
 
   pull_request:
     branches: [ "main" ]
     paths-ignore:
       - "helm/**"
       - "k8s/**"
-      - "**.md"
+      - "README.md"
 
 env:
   REGISTRY: docker.io
